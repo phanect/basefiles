@@ -87,6 +87,7 @@ module.exports = {
 
     let devDependencies = [
       "@phanect/eslint-plugin",
+      "eslint",
       "jest",
     ];
 
