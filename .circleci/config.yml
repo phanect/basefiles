@@ -45,8 +45,11 @@ workflows:
       - build
       - release:
           filters:
+            tags:
+              only: /^v.*/
+            # By default, release runs on push to any branches.
+            # To avoid running release, it is required to ignore all branches here.
             branches:
-              only:
-                - master
+              ignore: /.*/
           requires:
             - build
